@@ -1,6 +1,16 @@
-.background-image {
-    background-image: url('css-image/Homebg.png');
+.background-image 
+{
+    background-image: url('C:/Users/SHWETA/OneDrive/Desktop/Capstone-frontend/css-image/Homebg.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-  }
+}
+.auto-style1 
+{
+    width: 54%;
+    height: 240px;
+    margin-left: 305px;
+    margin-top: 200px;
+    margin-bottom: 0;
+    align-content: center;
+}
