@@ -34,7 +34,7 @@ form.addEventListener('submit', (event) => {
   .then(function (response) {
     console.log(response);
     // Navigate to the student home page
-    window.location.href = '../Homepg.html';
+    window.location.href = './Homepg.html';
   })
   .catch(function (error) {
     console.log(error);
