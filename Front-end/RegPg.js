@@ -1,62 +1,47 @@
-const validateForm = ({ email, password, gender, role }) => {
+// Get the form element
+const form = document.querySelector('form');
 
-    const roles = ['admin', 'user', 'Admin', 'User']
-  
-    if (email.length <= 0) return { msg: 'invalid email', sts: false }
-    if (password.length <= 0) return { msg: 'invalid password', sts: false }
-    if (gender == null) return { msg: 'invalid gender', sts: false }
-    if ((role.length <= 0) || !roles.includes(role)) return { msg: 'invalid role', sts: false }
-  
-    return { sts: 'success', msg: 'all fields are valid' }
+// Add a submit event listener to the form
+form.addEventListener('submit', (event) => {
+  // Prevent the default form submission behavior
+  event.preventDefault();
+
+  // Get the values of the email and password fields
+  const email = document.querySelector('#email').value;
+  const password = document.querySelector('#password').value;
+
+  // Perform validation
+  if (!email.trim()) {
+    alert('Please enter your email');
+    return;
   }
-  
-  function setupForm() {
-  
-    const err = document.getElementById('errMsg')
-    err.style.display = 'none'
-  
-    const formSignup = document.getElementById('signup-link')
-  
-    formSignup.onsubmit = ev => { // when form is submitted, this function would be called
-  
-        ev.preventDefault() // stop the default behaviour of refreshing the page
-  
-        const formData = new FormData(ev.target) // ev.target points to form tag in the html
-  
-        const user = Object.fromEntries(formData.entries()) // you are converting form data to js object
-        console.log(user)
-  
-        const { sts, msg } = validateForm(user)
-  
-        if (sts) apiSignup(user, formSignup)
-        else {
-            err.style.display = 'block'
-            err.innerHTML = `<strong>${msg}</strong>`
-        }
-  
-    }
+
+  if (!isValidEmail(email)) {
+    alert('Please enter a valid email');
+    return;
   }
-  
-  setupForm()
-  
-  function apiSignup(user, form) {
-    const headers = {
-        'content-type': 'application/json'
-    }
-    console.log(user)
-  
-    axios.post('http://localhost:8080/signup/', user, { headers })
-  
-        .then(res => {
-            form.reset()
-            // window.location.reload()
-            showSuccessModal()
-        }).catch(err => console.log(err))
+
+  if (!password.trim()) {
+    alert('Please enter your password');
+    return;
   }
-  
-  function showSuccessModal() {
-    const myModalEl = document.getElementById('successModal');
-    const modal = new bootstrap.Modal(myModalEl)
-    modal.show()
-    // window.location.href = "../loginpage/login.html";
-  }
+
+  // Use axios to post the form data to the server
+  axios.post('/signup', {
+    email: email,
+    password: password
+  })
+  .then(function (response) {
+    // Navigate to the student home page
+    window.location.href = 'studenthome.html';/// path
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
+});
+
+// Function to validate email addresses
+function isValidEmail(email) {
+  const emailRegex = /^\S+@\S+\.\S+$/;
+  return emailRegex.test(email);
+}
