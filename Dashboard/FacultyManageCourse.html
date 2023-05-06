@@ -8,8 +8,12 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>Sidenav Light - SB Admin</title>
-    <link href="Style/styles.css" rel="stylesheet" />
+    <link href="./styles.css" rel="stylesheet" />
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="Style/datatables.css">
+
+
 </head>
 
 <body class="sb-nav-fixed">
@@ -86,36 +90,33 @@
                         Courses Management
                     </div>
                     <div class="card-body">
-                        <table id="datatablesSimple" >
+                        <table id="myTable" class="table table-bordered dataTable no-footer">
                             <thead>
                                 <tr>
-                                    <th>Name</th>
-                                    <th>Position</th>
-                                    <th>Office</th>
-                                    <th>Age</th>
-                                    <th>Start date</th>
-                                    <th>Salary</th>
+                                    <th>Course Name</th>
+                                    <th>Faculty Name</th>
+                                    <th>Start Date</th>
+                                    <th>End date</th>
+                                    <th>Actions</th>
                                 </tr>
                             </thead>
-                           
+
                             <tbody>
                                 <tr>
-                                    <td>Tiger Nixon</td>
-                                    <td>System Architect</td>
-                                    <td>Edinburgh</td>
-                                    <td>61</td>
-                                    <td>2011/04/25</td>
-                                    <td>$320,800</td>
+                                    <td>Java</td>
+                                    <td>abc</td>
+                                    <td>2022/01/01</td>
+                                    <td>2022/04/30</td>
+                                    <td><a href="">UPDATE</a> <a href="">DELETE</a></td>
                                 </tr>
                                 <tr>
-                                    <td>Garrett Winters</td>
-                                    <td>Accountant</td>
-                                    <td>Tokyo</td>
-                                    <td>63</td>
-                                    <td>2011/07/25</td>
-                                    <td>$170,750</td>
+                                    <td>Python</td>
+                                    <td>xyz</td>
+                                    <td>2022/02/11</td>
+                                    <td>2022/04/30</td>
+                                    <td><a href="">UPDATE</a> <a href="">DELETE</a></td>
                                 </tr>
-                                <tr>
+                                <!-- <tr>
                                     <td>Ashton Cox</td>
                                     <td>Junior Technical Author</td>
                                     <td>San Francisco</td>
@@ -130,8 +131,8 @@
                                     <td>22</td>
                                     <td>2012/03/29</td>
                                     <td>$433,060</td>
-                                </tr>
-                                
+                                </tr> -->
+
                             </tbody>
                         </table>
                     </div>
@@ -139,7 +140,7 @@
             <footer class="py-4 bg-light mt-auto">
                 <div class="container-fluid px-4">
                     <div class="d-flex align-items-center justify-content-between small">
-                        
+
                     </div>
                 </div>
             </footer>
@@ -148,6 +149,17 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         crossorigin="anonymous"></script>
     <script src="js/scripts.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap5.min.js"></script>
+    <script src="DataTables/datatables.min.js"></script>
+
+    <!-- initialize DataTables -->
+    <script>
+        $(document).ready(function () {
+            $('#myTable').DataTable();
+        });
+    </script>
 </body>
 
 </html>

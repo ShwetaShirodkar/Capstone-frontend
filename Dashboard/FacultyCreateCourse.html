@@ -8,8 +8,9 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>Sidenav Light - SB Admin</title>
-    <link href="Style/styles.css" rel="stylesheet" />
+    <link href="./styles.css" rel="stylesheet" />
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="Style/create_course.css">
 </head>
 
 <body class="sb-nav-fixed">
@@ -80,12 +81,38 @@
         </div>
         <div id="layoutSidenav_content">
             <main>
-               
+
+                <h1>Create Course</h1>
+                <form id="formCourse">
+                    <label for="course-id">Course ID:</label><br>
+                    <input type="text" id="course-id" name="course-id"><br>
+
+                    <label for="course-name">Course Name:</label><br>
+                    <input type="text" id="course-name" name="course-name"><br>
+
+                    <label for="faculty-name">Faculty Name:</label><br>
+                    <input type="text" id="faculty-name" name="faculty-name"><br>
+
+                    <label for="start-date">Start Date:</label><br>
+                    <input type="date" id="start-date" name="start-date"><br>
+
+                    <label for="end-date">End Date:</label><br>
+                    <input type="date" id="end-date" name="end-date"><br>
+
+                    <label for="course-material-link">Course Material Link:</label><br>
+                    <input type="text" id="course-material-link" name="course-material-link"><br>
+
+                    <label for="course-recording-link">Course Recording Link:</label><br>
+                    <input type="text" id="course-recording-link" name="course-recording-link"><br>
+
+                    <input type="submit" value="Submit">
+                </form>
+
             </main>
             <footer class="py-4 bg-light mt-auto">
                 <div class="container-fluid px-4">
                     <div class="d-flex align-items-center justify-content-between small">
-                        
+
                     </div>
                 </div>
             </footer>
