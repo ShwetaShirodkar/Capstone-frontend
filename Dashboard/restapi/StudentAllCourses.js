@@ -24,7 +24,7 @@ function populateActualData(table, courses) {
     updateButton.setAttribute('data-id', courseId)
     updateButton.addEventListener('click', (event) => {
       const courseId = event.target.getAttribute('data-id')
-      window.location.href = `./UpdateCourse.html?id=${courseId}`
+      window.location.href = `./ViewCourse.html?id=${courseId}`
     })
     card.appendChild(header)
     card.appendChild(faculty)

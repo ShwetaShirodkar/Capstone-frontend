@@ -5,8 +5,14 @@
 }
 
 body {
-  background-color: #18d1d4;
   font-family: Arial, sans-serif;
+}
+.background-image 
+{
+    background-image: url('C:/Users/SHWETA/OneDrive/Desktop/Capstone-frontend/css-image/Homebg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .container {
