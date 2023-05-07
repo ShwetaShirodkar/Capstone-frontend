@@ -7,6 +7,9 @@
 
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link href="./styles.css" rel="stylesheet" />
+        <link rel="stylesheet" href="./datatables.css">
+    
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
@@ -15,9 +18,7 @@
         <title> Courses Management</title>
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
 
-        <link href="./styles.css" rel="stylesheet" />
 
-        <link rel="stylesheet" href="./datatables.css">
     </head>
 
     <body class="sb-nav-fixed">
@@ -67,21 +68,21 @@
                         Courses Management
                     </div>
                     <div class="card-body">
-                        <table id="tableCourse" class="table table-bordered dataTable no-footer">
+                        <table class="table table-bordered dataTable no-footer">
                             <thead>
                                 <tr>
-                                    <th>Course Id</th>
-                                    <th> Course Name</th>
-                                    <th> Faculty Name </th>
-                                    <th> Start Date </th>
-                                    <th> End Date</th>
-                                    <th> Materials </th>
-                                    <th> Recordings</th>
-                                    <th> Actions </th>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Course name</th>
+                                    <th scope="col">Faculty name</th>
+                                    <th scope="col">Material</th>
+                                    <th scope="col">Recording</th>
+                                    <th scope="col">startDate</th>
+                                    <th scope="col">endDate</th>
+                                    <th scope="col">Action</th>
                                 </tr>
                             </thead>
 
-                            <tbody>
+                            <tbody id="tableCourse">
                                
                             </tbody>
                         </table>
@@ -97,29 +98,29 @@
             </div>
             </div>
 
-        <div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="confirm-delete-label">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                    <h4 class="modal-title" id="confirm-delete-label">Confirm deletion</h4>
-                </div>
-                <div class="modal-body">
-                    <p>Are you sure you want to delete this item?</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                    <button type="button" class="btn btn-danger" id="confirm-delete-btn">Delete</button>
-                </div>
-            </div>
+              <!-- Modal -->
+  <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Confirm </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
+        <div class="modal-body">
+          Do You Really Want To Delete ?
         </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-danger" id="btDl">Delete It</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         crossorigin="anonymous"></script>
+
         <script src="./restapi/FacultyManageCourse.js"></script>
 
     </body>

@@ -24,10 +24,13 @@ function populateActualData(table, courses) {
 }
 
 function deleteCourse(id) {
-    axios.delete('http://localhost:8080/courses/delete/${id}')
+    console.log(id)
+    //id = Number(id);
+    axios.delete('http://localhost:8080/course/${id}')
         .then(function (response) {
             console.log('Course deleted')
             window.alert("Course deleted successfully")
+
         })
         .catch(function (error) {
             // Handle error response
