@@ -7,10 +7,10 @@ setUpTable()
 
 function populateActualData(table, courses) {
     for (const course of courses) {
-        const { id, courseName, facultyName, startDate, endDate, material, recording } = course
-        const updatePageUrl = `./update-course.html?id=${id}`
+        const { courseId, courseName, facultyName, startDate, endDate, material, recording } = course
+        const updatePageUrl = `./UpdateCourse.html?id=${courseId}`
         const row = table.insertRow()
-        row.insertCell(0).innerHTML = id
+        row.insertCell(0).innerHTML = courseId
         row.insertCell(1).innerHTML = courseName
         row.insertCell(2).innerHTML = facultyName
         row.insertCell(3).innerHTML = startDate
@@ -19,14 +19,14 @@ function populateActualData(table, courses) {
         row.insertCell(6).innerHTML = recording
         row.insertCell(7).innerHTML = `
             <a class="btn btn-primary" href='${updatePageUrl}'>Update</a>
-            <a class="btn btn-danger" onclick='deleteCourse(${id})'>Delete</a>`
+            <a class="btn btn-danger" onclick='deleteCourse(${courseId})'>Delete</a>`
     }
 }
 
-function deleteCourse(id) {
-    console.log(id)
+function deleteCourse(courseId) {
+    console.log(courseId)
     //id = Number(id);
-    axios.delete('http://localhost:8080/course/${id}')
+    axios.delete(`http://localhost:8080/courses/delete/${courseId}`)
         .then(function (response) {
             console.log('Course deleted')
             window.alert("Course deleted successfully")
