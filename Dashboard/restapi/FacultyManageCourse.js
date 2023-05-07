@@ -18,8 +18,8 @@ function populateActualData(table, courses) {
         row.insertCell(5).innerHTML = material
         row.insertCell(6).innerHTML = recording
         row.insertCell(7).innerHTML = `
-            <a class="btn btn-primary" href='${updatePageUrl}'>Update</a>
-            <a class="btn btn-danger" onclick='deleteCourse(${courseId})'>Delete</a>`
+            <a class="" href='${updatePageUrl}'>Update</a>
+            <a class="" onclick='deleteCourse(${courseId})'>Delete</a>`
     }
 }
 
