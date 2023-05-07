@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+          
+            <link href="./stylesheet.css" rel="stylesheet" />
+            <link href="./datatables.css" rel="stylesheet" />
+            <link rel="stylesheet" type="text/css" href="./create_course.css">
+            <link href="./styles.css" rel="stylesheet" />
+            
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body class="sb-nav-fixed">
+    <nav class="sb-topnav navbar navbar-expand navbar-light bg-dark">
+        <!-- Navbar Brand-->
+        <a class="navbar-brand navbar-dark ps-3" href="#">Dashboard</a>
+        <!-- Sidebar Toggle-->
+        <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i
+                class="fas fa-bars"></i></button>
+       
+        <ul class="navbar-nav navbar-dark ms-auto ">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Log Out
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <!-- <div id="layoutSidenav">
+        <div id="layoutSidenav_nav">
+            <ul class="sb-sidenav accordion sb-sidenav-light" id="sidenavAccordion">
+                <div class="sb-sidenav-menu">
+                    <li class="nav-item">
+                        <a class="nav-link" href="">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>Create Course</span>
+                        </a>
+                    </li>
+                    <hr class="sidebar-divider my-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>Manage Course</span>
+                        </a>
+                    </li>
+
+                </div>
+            </ul>
+        </div> -->
+        <div id="layoutSidenav_content">
+            <main>
+<br><br>
+                <h1>Update Course</h1>
+                <form id="formCourse">
+                    <div class="row">
+                        <div class="col">
+                            <div class="alert alert-danger" role="alert" id="errMsg">
+                            </div>
+                        </div>
+                     </div>
+
+
+                    <label for="course-name">Course Name:</label><br>
+                    <input type="text" id="course-name" name="courseName"><br>
+
+                    <label for="faculty-name">Faculty Name:</label><br>
+                    <input type="text" id="faculty-name" name="facultyName"><br>
+
+                    <label for="start-date">Start Date:</label><br>
+                    <input type="date" id="start-date" name="startDate"><br>
+
+                    <label for="end-date">End Date:</label><br>
+                    <input type="date" id="end-date" name="endDate"><br>
+                    
+                    <label for="course-material-link">Course Material Link:</label><br>
+                    <input type="text" id="course-material-link" name="material"><br>
+
+                    <label for="course-recording-link">Course Recording Link:</label><br>
+                    <input type="text" id="course-recording-link" name="recording"><br>
+                    
+                    <div>
+                        <input type="submit" value="Update">
+                        <input type="submit" onclick="window.location='./FacultyManageCourse'" value="Cancle">
+                    </div>
+                    
+                </form>
+
+
+
+            </main>
+            <footer class="py-4 bg-light mt-auto">
+                <div class="container-fluid px-4">
+                    <div class="d-flex align-items-center justify-content-between small">
+
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Success</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Course updated Successfully
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" onclick="window.location='/FacultyManageCourse.html';" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+    <script src="./restapi/UpdateCourse.js"></script>
+</body>
+
+</html>
