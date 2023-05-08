@@ -15,7 +15,7 @@ function populateActualData(table, courses) {
   grid.classList.add('grid')
 
   for (const course of courses) {
-    const { id, courseName, facultyName, startDate, endDate } = course
+    const { courseId, courseName, facultyName, startDate, endDate } = course
     const card = document.createElement('div')
     card.classList.add('card')
     const header = document.createElement('h2')
@@ -27,10 +27,10 @@ function populateActualData(table, courses) {
     const updateButton = document.createElement('button')
     updateButton.innerHTML = 'Get Started'
     updateButton.classList.add('btn', 'btn-success')
-    updateButton.setAttribute('data-id', id)
+    updateButton.setAttribute('data-id', courseId)
     updateButton.addEventListener('click', (event) => {
       const courseId = event.target.getAttribute('data-id')
-      window.location.href = `./individual-course.html?id=${id}`
+      window.location.href = `./ViewCourse.html?id=${courseId}`
     })
     card.appendChild(header)
     card.appendChild(faculty)
