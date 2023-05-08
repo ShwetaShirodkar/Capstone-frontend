@@ -71,7 +71,7 @@ function deleteCourse(courseId) {
 }
 
 function apiFetchAllCourses(table) {
-  axios.get('http://localhost:8080/courses/list')
+  axios.get(`http://localhost:8080/courses/list`)
       .then(res => {
           const { data } = res
           console.log(data)
@@ -82,7 +82,7 @@ function apiFetchAllCourses(table) {
 }
 
 function apiFetchAllCourseByName(table, courseValue) {
-  const url = 'http://localhost:8080/courses/name'
+  const url = `http://localhost:8080/courses/name`
   axios.get(url, {
       params: {
           courseName: courseValue
