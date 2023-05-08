@@ -50,8 +50,8 @@ function setUpTable() {
         row.insertCell(2).innerHTML = facultyName
         row.insertCell(3).innerHTML = startDate
         row.insertCell(4).innerHTML = endDate
-        row.insertCell(5).innerHTML = material
-        row.insertCell(6).innerHTML = recording
+        row.insertCell(5).innerHTML = `<button class="browse-button"><a href="${material}">Browse</a></button>`
+        row.insertCell(6).innerHTML = `<button class="watch-now-button"><a href="${recording}">Watch Now</a></button>`
         row.insertCell(7).innerHTML = `
             <a class="" href='${updatePageUrl}'>Update</a>
             <a class="" onclick='deleteCourse(${courseId})'>Delete</a>`

@@ -22,23 +22,25 @@ function populateActualData(table, courses) {
     const { courseName, facultyName, material, recording, startDate, endDate } = course
     const card = document.createElement('div')
     card.classList.add('card')
-    const header = document.createElement('h2')
+    const header = document.createElement('h1')
     header.innerHTML = courseName
-    const faculty = document.createElement('p')
+    const faculty = document.createElement('h4')
     faculty.innerHTML = `By: ${facultyName}`
     const dates = document.createElement('p')
-    dates.innerHTML = `Schedule:${startDate} to ${endDate}`
-    const materialLink = document.createElement('a')
-    materialLink.innerHTML = 'Material'
-    materialLink.setAttribute('href', material)
-    const recordingLink = document.createElement('a')
-    recordingLink.innerHTML = 'Recording'
-    recordingLink.setAttribute('href', recording)
+    dates.innerHTML = `Schedule: ${startDate} to ${endDate}`
+    const materialButton = document.createElement('button');
+    materialButton.classList.add('browse-button');
+    materialButton.innerHTML = 'Browse Material';
+    materialButton.addEventListener('click', () => window.open(material, '_blank'));
+    const recordingButton = document.createElement('button');
+    recordingButton.classList.add('watch-now-button');
+    recordingButton.innerHTML = 'View Recordings';
+    recordingButton.addEventListener('click', () => window.open(recording, '_blank'));
     card.appendChild(header)
     card.appendChild(faculty)
     card.appendChild(dates)
-    card.appendChild(materialLink)
-    card.appendChild(recordingLink)
+    card.appendChild(materialButton)
+    card.appendChild(recordingButton)
     grid.appendChild(card)
   }
   table.appendChild(grid)
