@@ -1,0 +1,7 @@
+.new-card-body{
+    width: 100%;
+}
+.col-wrap-custom {
+    word-wrap: break-word;
+    width: 5% !important;
+  }
