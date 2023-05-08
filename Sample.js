@@ -25,8 +25,11 @@ setUpTable()
 
 function populateActualData(table, courses) {
 
-  while (table.rows.length > 1) {
-    table.deleteRow(1);
+  // while (table.rows.length > 1) {
+  //   table.deleteRow(1);
+
+  while (table.rows.length > 0) {
+    table.deleteRow(table.rows.length - 1);
   }
 
   if (courses.length === 0) {
