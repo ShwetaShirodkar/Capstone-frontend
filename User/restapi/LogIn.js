@@ -35,6 +35,7 @@ function setupForm() {
 setupForm()
 
 function apiLogin(user, form) {
+  
   const headers = {
       'content-type': 'application/json'
   }
@@ -53,9 +54,10 @@ function apiLogin(user, form) {
           else  window.location.href = "../Dashboard/FacultyCreateCourse.html"
       } )
       .catch(err => {
-          console.log(err)
-          const errDv = document.getElementById('errMsg')
-          errDv.style.display = 'block'
-          errDv.innerHTML = `<strong>${err.response.data.msg}</strong>`
+        console.log(err)
+        const errDv = document.getElementById('errMsg')
+        let errMsg = 'Wrong user ID or password. Please try again.'
+        errDv.style.display = 'block'
+        errDv.innerHTML = `<strong>${errMsg}</strong>`
       })
 }
