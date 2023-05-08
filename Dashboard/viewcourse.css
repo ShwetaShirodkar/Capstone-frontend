@@ -13,6 +13,7 @@
       border: 1px solid #ccc;
       border-radius: 5px;
       padding: 20px;
+      background-color: aquamarine;
     }
   
   
@@ -47,3 +48,4 @@
       margin: 4px 2px;
       cursor: pointer;
     }
+  
