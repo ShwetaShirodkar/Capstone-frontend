@@ -51,7 +51,8 @@ function apiLogin(user, form) {
           const { role } = data.bd
 
           if(role == 'user') window.location.href = '../Dashboard/StudentAllCourses.html'
-          else  window.location.href = "../Dashboard/FacultyCreateCourse.html"
+          else if (role == 'faculty') window.location.href = "../Dashboard/FacultyCreateCourse.html"
+          else window.location.href = "../Dashboard/AdminAddRoles.html"
       } )
       .catch(err => {
         console.log(err)
