@@ -15,7 +15,7 @@
     crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-    <title>Student Dashboard- All Courses</title>
+    <title>Student Dashboard-Courses Details </title>
 </head>
 
 <body class="sb-nav-fixed">
@@ -54,7 +54,7 @@
                     </li>
                     <hr class="sidebar-divider my-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="./StudentMyCourse.html">
+                        <a class="nav-link" href="">
                             <i class="fas fa-tachometer-alt"></i>
                             <span>My Courses</span>
                         </a>
@@ -69,6 +69,7 @@
         </div>
         <div id="layoutSidenav_content">
             <main>
+                <br> <br>
                   <div class="container">
                     <div class="card-grid">
                         <div class="card">
@@ -77,11 +78,17 @@
                                     
                                 </tbody>
                             </table>
-                            <br> <br>
+                            <br>
+                            <div style="text-align: center;">
+                                <button type="submit" class="btn btn-success" style="width: 100px; height: 40px;"onclick="enrollByUserId()">Enroll</button>
+                                <button type="submit" class="btn btn-danger" style="width: 100px; height: 40px;" onclick="window.location.href='./StudentAllCourses.html'">Cancel</button>
+
+                            </div>
                                  
                         </div>
-        
+                                
                     </div>
+                    
                 </div>
             </main>
             <footer class="py-4 bg-light mt-auto">
@@ -94,10 +101,50 @@
         </div>
     </div>
 
+    <div class="modal fade" id="successModal1" tabindex="-1" aria-labelledby="exampleModalLabel1"
+    aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" class="text-black" id="exampleModalLabel1" style="color: black;">
+                    Success</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p class="text-black text-lg text-center">Already Enrolled!</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+  </div>
+
+
+
+  <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" class="text-black" id="exampleModalLabel" style="color: black;">
+                  Success</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <p class="text-black text-lg text-center">Enrolled Successfully!!!</p>
+              
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+      </div>
+  </div>
+  </div>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         crossorigin="anonymous"></script>
-    <script src="./restapi/StudentAllCourses.js"></script>
+    <script src="./restapi/CourseDetails.js"></script>
 </body>
 
 </html>
