@@ -1,7 +1,7 @@
 function setupTable() {
     const table = document.getElementById('tableEnrolledStudents')
 
-    // const btnSearch = document.getElementById('btnSearch')
+    const courseSearch = document.getElementById('courseSearch')
     
     // btnSearch.onclick = () =>   {
 
