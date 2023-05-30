@@ -8,6 +8,8 @@ function setupTable() {
     //     const api=apiFetchBooking(table, document.getElementById('txtUsername').value )
     //     console.log(api)
     // }
+
+    
     
     apiFetchAllEnrollments(table)
 }
