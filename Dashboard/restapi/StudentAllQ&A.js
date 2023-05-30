@@ -1,6 +1,6 @@
 function setUpTable() {
-    const table = document.getElementById('tableQuestion')
-    apiFetchAllQuestions(table)
+  const table = document.getElementById('tableQuestion')
+  apiFetchAllQuestions(table)
 
 }
 
@@ -13,7 +13,7 @@ setUpTable()
 //     for (const list of questions) {
 
 //         const { id, studentName, question, answer} = list
-        
+      
 //         const createPageUrl = `./create-question.html?id=${id}`
 
 
@@ -26,28 +26,28 @@ setUpTable()
 //         row.insertCell(1).innerHTML = studentName
 //         row.insertCell(2).innerHTML = question
 //         row.insertCell(3).innerHTML = answer
-        
+      
 
 //     }
 // }
 
 function populateActualData(table, questions) {
-    if (!Array.isArray(questions)) {
-      console.error('Invalid questions data. Expected an array.');
-      return;
-    }
-  
-    for (const question of questions) {
-      const { id, studentName, question: questionText, answer: answerObj } = question;
-      const answer = answerObj ? answerObj.answer : ''; // Access the nested answer field
-  
-      const row = table.insertRow();
-      row.insertCell(0).innerHTML = id;
-      row.insertCell(1).innerHTML = studentName;
-      row.insertCell(2).innerHTML = questionText;
-      row.insertCell(3).innerHTML = answer;
-    }
+  if (!Array.isArray(questions)) {
+    console.error('Invalid questions data. Expected an array.');
+    return;
   }
+
+  for (const question of questions) {
+    const { id, studentName, question: questionText, answer: answerObj } = question;
+    const answer = answerObj ? answerObj.answer : ''; // Access the nested answer field
+
+    const row = table.insertRow();
+    row.insertCell(0).innerHTML = id;
+    row.insertCell(1).innerHTML = studentName;
+    row.insertCell(2).innerHTML = questionText;
+    row.insertCell(3).innerHTML = answer;
+  }
+}
 
 
 // function populateActualData(table, questions) {
@@ -55,11 +55,11 @@ function populateActualData(table, questions) {
 //       console.error('Invalid questions data. Expected an array.');
 //       return;
 //     }
-  
+
 //     for (const list of questions) {
 //       const { id, studentName, question, answer } = list;
 //       const createPageUrl = `./create-question.html?id=${id}`;
-  
+
 //       const row = table.insertRow();
 //       row.insertCell(0).innerHTML = id;
 //       row.insertCell(1).innerHTML = studentName;
@@ -67,6 +67,9 @@ function populateActualData(table, questions) {
 //       row.insertCell(3).innerHTML = answer;
 //     }
 //   }
+
+
+
 
 
 
@@ -80,3 +83,4 @@ function apiFetchAllQuestions(table) {
       })
       .catch(err => console.log(err))
 }
+
