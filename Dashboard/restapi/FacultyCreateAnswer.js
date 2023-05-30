@@ -30,7 +30,7 @@ function apiCreateNewAnswer(answers, form, ){
             form.reset()
             window.alert("Answer added successfully")
             
-            window.location.href="./list-answer.html"
+            window.location.href="./FacultyListAnswer.html"
             //showSuccessModal()
         })
         .catch(err => console.log(err))

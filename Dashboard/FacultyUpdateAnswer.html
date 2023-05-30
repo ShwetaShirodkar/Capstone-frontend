@@ -19,7 +19,6 @@
         <title> Courses Management</title>
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
 
-
     </head>
 
     <body class="sb-nav-fixed">
@@ -27,13 +26,12 @@
         <!-- Navbar Brand-->
         <a class="navbar-brand navbar-dark ps-3" href="#">Dashboard</a>
         <!-- Sidebar Toggle-->
-
-        <!-- <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+        <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
             <div class="input-group">
                 <input id="courseSearch" class="form-control" type="text" placeholder="Search by Course Name" aria-label="Search for..." aria-describedby="btnNavbarSearch" />
                 <button id="btnSearch" class="btn btn-primary" type="button"><i class="fas fa-search"></i></button>
             </div>
-        </form> -->
+        </form>
 
         <ul class="navbar-nav navbar-dark ms-auto ">
             <li class="nav-item mx-5 ">
@@ -50,7 +48,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="./FacultyCreateCourse.html">
                             <i class="fas fa-tachometer-alt"></i>
-                            <span>Create Course</span>
+                            <span>Create Answer</span>
                         </a>
                     </li>
                     <hr class="sidebar-divider my-0">
@@ -61,36 +59,42 @@
                         </a>
                     </li>
 
+                    <hr class="sidebar-divider my-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./CreateAnswer.html">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>Create Answer</span>
+                        </a>
+                    </li>
+
+
                 </div>
             </ul>
             </div>
+            
             <div id="layoutSidenav_content">
-            <main class="mx-4">
-            <!-- <div class="card "> -->
-                    <div class="card-header mt-2">
-                        
-                        <i class="fas fa-table me-1"></i>
-                        All Questions
-                        
-                    </div>
-               
-                    <div class="card-body new-card-body ml-10 mr-5" >
-                        <table class="table table-striped table-bordered" id="tableQuestion">
-                            <thead >
-                                <tr class="th">
-                                    <th > Id</th>
-                                    <th> Student Name</th>
-                                    <th> Question</th>
-                                    <th> Answer</th>
-                                    <th> Action </th>
-                            </thead>
-                
-                            <tbody>
-                            </tbody>
-                
-                        </table>
-                    </div>
-              </main>
+                <div class="col-lg-6 col-md-6 col-sm-6 container justify-content-center card">
+                    <br>
+                    <h1 class="text-center">Add Answer </h1>
+                    <div class="card-body">
+                        <form id="formAnswer">
+                            <div class ="alert alert-danger" role="alert" id="errDiv"></div>
+    
+        
+    
+                            <div class="form-group">
+                                <label > Answer</label>
+                                <input type="answer" name="answer" id="answer" class="form-control"
+                                    placeholder="Enter the answer" required />
+                            </div>
+    
+                            <div class="box-footer">
+                                <button type="submit" class="btn btn-primary">
+                                    Update
+                                </button>
+                            </div>
+                        </form>
+
             <footer class="py-4 bg-light mt-auto">
                 <div class="container-fluid px-4">
                     <div class="d-flex align-items-center justify-content-between small">
@@ -101,7 +105,7 @@
             </div>
             </div>
 
-              <!-- Modal -->
+            
   <!-- <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -124,7 +128,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         crossorigin="anonymous"></script>
 
-        <script src="./restapi/AllQuestions.js"></script>
+        <script src="./restapi/FacultyCreateAnswer.js"></script>
 
     </body>
 </html>

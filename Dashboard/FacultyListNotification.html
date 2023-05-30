@@ -16,7 +16,7 @@
         crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-        <title> Courses Management</title>
+        <title> Enrolled Students</title>
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
 
 
@@ -59,12 +59,25 @@
                             <span>Manage Course</span>
                         </a>
                     </li>
-
                     <hr class="sidebar-divider my-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="./CreateAnswer.html">
+                        <a class="nav-link" href="./FacultyEnrolledStudents.html">
                             <i class="fas fa-tachometer-alt"></i>
-                            <span>Create Answer</span>
+                            <span>Enrolled Students</span>
+                        </a>
+                    </li>
+                    <hr class="sidebar-divider my-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./FacultyCreateNotification.html">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>Create Notification</span>
+                        </a>
+                    </li>
+                    <hr class="sidebar-divider my-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./FacultyListNotification.html">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>All Notification</span>
                         </a>
                     </li>
 
@@ -72,30 +85,33 @@
                 </div>
             </ul>
             </div>
-            
             <div id="layoutSidenav_content">
-                <div class="col-lg-6 col-md-6 col-sm-6 container justify-content-center card">
-                    <br>
-                    <h1 class="text-center">Add Answer </h1>
-                    <div class="card-body">
-                        <form id="formAnswer">
-                            <div class ="alert alert-danger" role="alert" id="errDiv"></div>
-    
-        
-    
-                            <div class="form-group">
-                                <label > Answer</label>
-                                <input type="answer" name="answer" id="answer" class="form-control"
-                                    placeholder="Enter the answer" required />
-                            </div>
-                                <br>
-                            <div class="box-footer">
-                                <button type="submit" class="btn btn-primary">
-                                    Add
-                                </button>
-                            </div>
-                        </form>
+            <main class="mx-4">
+            <!-- <div class="card "> -->
+                    <div class="card-header mt-2">
+                        
+                        <i class="fas fa-table me-1"></i>
+                        All Notification
+                        
+                    </div>
+               
+                    <div class="card-body new-card-body ml-10 mr-5" >
+                        <table class="table table-bordered dataTable no-footer" id="tableNotification">
+                            <thead>
+                                <tr>
+                                    <th >Notification Id</th>
+                                    <th> Date</th>
+                                    <th> Notification </th>
+                                    <th> Action </th>
+                                </tr>
+                            </thead>
 
+                            <tbody >
+                               
+                            </tbody>
+                        </table>
+                    </div>
+              </main>
             <footer class="py-4 bg-light mt-auto">
                 <div class="container-fluid px-4">
                     <div class="d-flex align-items-center justify-content-between small">
@@ -106,7 +122,7 @@
             </div>
             </div>
 
-            
+              <!-- Modal -->
   <!-- <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -129,7 +145,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         crossorigin="anonymous"></script>
 
-        <script src="./restapi/CreateAnswer.js"></script>
+        <script src="./restapi/FacultyListNotification.js"></script>
 
     </body>
 </html>

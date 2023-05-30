@@ -16,7 +16,7 @@
         crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-        <title> Courses Management</title>
+        <title> Enrolled Students</title>
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
 
 
@@ -91,7 +91,7 @@
                     <div class="card-header mt-2">
                         
                         <i class="fas fa-table me-1"></i>
-                        Courses Management
+                        Enrolled Student
                         
                     </div>
                
@@ -99,18 +99,13 @@
                         <table class="table table-bordered dataTable no-footer">
                             <thead>
                                 <tr>
-                                    <th scope="col">Course Id</th>
-                                    <th scope="col">Course name</th>
-                                    <th scope="col">Faculty name</th>
-                                    <th scope="col">Start Date</th>
-                                    <th scope="col">End Date</th>
-                                    <th scope="col">Material</th>
-                                    <th scope="col">Recording</th>
-                                    <th scope="col">Action</th>
+                                    <th scope="col">Sudent Name</th>
+                                    <th scope="col">Course Name</th>
+                                    <th scope="col">Faculty Name</th>
                                 </tr>
                             </thead>
 
-                            <tbody id="tableCourse">
+                            <tbody id="tableEnrolledStudents">
                                
                             </tbody>
                         </table>
@@ -127,7 +122,7 @@
             </div>
 
               <!-- Modal -->
-  <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <!-- <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -143,13 +138,13 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         crossorigin="anonymous"></script>
 
-        <script src="./restapi/FacultyManageCourse.js"></script>
+        <script src="./restapi/FacultyEnrolledStudents.js"></script>
 
     </body>
 </html>

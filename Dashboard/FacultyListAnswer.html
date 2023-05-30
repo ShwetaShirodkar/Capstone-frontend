@@ -27,12 +27,13 @@
         <!-- Navbar Brand-->
         <a class="navbar-brand navbar-dark ps-3" href="#">Dashboard</a>
         <!-- Sidebar Toggle-->
-        <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+
+        <!-- <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
             <div class="input-group">
                 <input id="courseSearch" class="form-control" type="text" placeholder="Search by Course Name" aria-label="Search for..." aria-describedby="btnNavbarSearch" />
                 <button id="btnSearch" class="btn btn-primary" type="button"><i class="fas fa-search"></i></button>
             </div>
-        </form>
+        </form> -->
 
         <ul class="navbar-nav navbar-dark ms-auto ">
             <li class="nav-item mx-5 ">
@@ -91,28 +92,25 @@
                     <div class="card-header mt-2">
                         
                         <i class="fas fa-table me-1"></i>
-                        Courses Management
+                        All Questions And Answers
+                        <br>
                         
                     </div>
-               
+                    <br>
                     <div class="card-body new-card-body ml-10 mr-5" >
-                        <table class="table table-bordered dataTable no-footer">
-                            <thead>
-                                <tr>
-                                    <th scope="col">Course Id</th>
-                                    <th scope="col">Course name</th>
-                                    <th scope="col">Faculty name</th>
-                                    <th scope="col">Start Date</th>
-                                    <th scope="col">End Date</th>
-                                    <th scope="col">Material</th>
-                                    <th scope="col">Recording</th>
-                                    <th scope="col">Action</th>
-                                </tr>
+                        <table class="table table-striped table-bordered" id="tableAnswer">
+                            <thead >
+                                <tr class="th">
+                                    <th > Id</th>
+                                    <th> Student Name</th>
+                                    <th> Question</th>
+                                    <th> Answer</th>
+                                    <th> Action </th>
                             </thead>
-
-                            <tbody id="tableCourse">
-                               
+                
+                            <tbody>
                             </tbody>
+                
                         </table>
                     </div>
               </main>
@@ -127,7 +125,7 @@
             </div>
 
               <!-- Modal -->
-  <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <!-- <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -143,13 +141,13 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         crossorigin="anonymous"></script>
 
-        <script src="./restapi/FacultyManageCourse.js"></script>
+        <script src="./restapi/FacultyListAnswer.js"></script>
 
     </body>
 </html>
