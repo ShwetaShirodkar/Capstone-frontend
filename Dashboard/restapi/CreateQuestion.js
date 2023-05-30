@@ -17,7 +17,7 @@ function apiCreateNewQuestion(questions, form){
             form.reset()
             window.alert("Question added successfully")
             
-            window.location.href="./AllQuestions.html"
+            window.location.href="./StudentAllQ&A.html"
             //showSuccessModal()
         })
         .catch(err => console.log(err))
