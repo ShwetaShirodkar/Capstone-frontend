@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        
+            <link href="./styles.css" rel="stylesheet" />
+            <link rel="stylesheet" type="text/css" href="./create_course.css">
+
+            
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+  
+   
+</head>
+
+<body class="sb-nav-fixed">
+    <nav class="sb-topnav navbar navbar-expand  bg-dark">
+        <!-- Navbar Brand-->
+        <a class="navbar-brand navbar-dark ps-3" href="#">Dashboard</a>
+      
+
+        <ul class="navbar-nav navbar-dark ms-auto ">
+            <li class="nav-item mx-5 ">
+                <a class="nav-link " href="../Home/Homepg.html"  role="button" 
+                    aria-haspopup="true" aria-expanded="false">
+                    Log Out
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <div id="layoutSidenav">
+        <div id="layoutSidenav_nav">
+            <ul class="sb-sidenav accordion sb-sidenav-light" id="sidenavAccordion">
+                <div class="sb-sidenav-menu">
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="./StudentAllCourses.html">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>All Courses</span>
+                        </a>
+                    </li>
+                    <hr class="sidebar-divider my-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./StudentMyCourse.html">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>My Courses</span>
+                        </a>
+                    </li>
+
+                    <hr class="sidebar-divider my-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./CreateQuestion.html">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>Ask Question</span>
+                        </a>
+                    </li>
+
+                </div>
+            </ul>
+        </div>
+        <div id="layoutSidenav_content">
+            <main>
+
+                <h1>Create Question</h1>
+
+                <form id="formQuestion">
+                    <div class ="alert alert-danger" role="alert" id="errDiv"></div>
+
+                    
+                    <div class="form-group">
+                        <label > Student Name</label>
+                        <input type="studentName" name="studentName" id="studentName" class="form-control"
+                            placeholder="Enter the name" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label > Question</label>
+                        <input type="question" name="question" id="question" class="form-control"
+                            placeholder="Enter the question" required />
+                    </div>
+                      <br>
+                    <div class="box-footer">
+                        <button type="submit" class="btn btn-primary">
+                            Add
+                        </button>
+                    </div>
+                </form>
+
+
+
+            </main>
+            <footer class="py-4 bg-light mt-auto">
+                <div class="container-fluid px-4">
+                    <div class="d-flex align-items-center justify-content-between small">
+
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Success</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Course Created Successfully
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" onclick="window.location='#'" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+    <script src="./restapi/CreateQuestion.js"></script>
+</body>
+
+</html>
