@@ -16,7 +16,7 @@
         crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-        <title> Courses Management</title>
+        <title> Student- Q&A</title>
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
 
 
@@ -47,64 +47,59 @@
         <div id="layoutSidenav_nav">
             <ul class="sb-sidenav accordion sb-sidenav-light" id="sidenavAccordion">
                 <div class="sb-sidenav-menu">
+                    
+                    <hr class="sidebar-divider my-1">
                     <li class="nav-item">
-                        <a class="nav-link" href="./FacultyCreateCourse.html">
+                        <a class="nav-link" href="./StudentAllCourses.html">
                             <i class="fas fa-tachometer-alt"></i>
-                            <span>Create Course</span>
+                            <span>All Courses</span>
                         </a>
                     </li>
                     <hr class="sidebar-divider my-0">
+
                     <li class="nav-item">
-                        <a class="nav-link" href="./FacultyManageCourse.html">
+                        <a class="nav-link" href="./StudentMyCourse.html">
                             <i class="fas fa-tachometer-alt"></i>
-                            <span>Manage Course</span>
+                            <span>My Courses</span>
                         </a>
                     </li>
                     <hr class="sidebar-divider my-0">
+
                     <li class="nav-item">
-                        <a class="nav-link" href="./FacultyEnrolledStudents.html">
+                        <a class="nav-link" href="./StudentViewNotification.html">
                             <i class="fas fa-tachometer-alt"></i>
-                            <span>Enrolled Students</span>
+                            <span>Notifications</span>
                         </a>
                     </li>
                     <hr class="sidebar-divider my-0">
+
                     <li class="nav-item">
-                        <a class="nav-link" href="./FacultyCreateNotification.html">
-                            <i class="fas fa-tachometer-alt"></i>
-                            <span>Create Notification</span>
-                        </a>
-                    </li>
-                    <hr class="sidebar-divider my-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="./FacultyListNotification.html">
-                            <i class="fas fa-tachometer-alt"></i>
-                            <span>All Notification</span>
-                        </a>
-                    </li>
-                    <hr class="sidebar-divider my-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="./FacultyListAnswer.html">
+                        <a class="nav-link" href="./StudentAllQ&A.html">
                             <i class="fas fa-tachometer-alt"></i>
                             <span>Q & A</span>
                         </a>
                     </li>
                     <hr class="sidebar-divider my-0">
+
                     <li class="nav-item">
-                        <a class="nav-link" href="./FacultyAddMarks.html">
+                        <a class="nav-link" href="./CreateQuestion.html">
                             <i class="fas fa-tachometer-alt"></i>
-                            <span>Add Result</span>
+                            <span>ASk Question</span>
                         </a>
                     </li>
                     <hr class="sidebar-divider my-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="./FacultyListMark.html">
+                        <a class="nav-link" href="./StudentListMarks.html">
                             <i class="fas fa-tachometer-alt"></i>
-                            <span>Manage Result</span>
+                            <span>Results</span>
                         </a>
                     </li>
-
-
+                    <hr class="sidebar-divider my-0">
+                   
+                   
                 </div>
+
+                
             </ul>
             </div>
             <div id="layoutSidenav_content">
@@ -119,16 +114,16 @@
                     </div>
                     <br>
                     <div class="card-body new-card-body ml-10 mr-5" >
-                        <table class="table table-striped table-bordered" id="tableAnswer">
+                        <table class="table table-striped table-bordered" id="tableMark">
                             <thead >
                                 <tr class="th">
                                     <th > Id</th>
                                     <th> Student Name</th>
-                                    <th> Question</th>
-                                    <th> Answer</th>
-                                    <th> Action </th>
+                                    <th> Action</th>
+                                    <!-- <th> Marks </th>
+                                    <th> Grade </th>
+                                    <th> Feedback </th> -->
                             </thead>
-                
                             <tbody>
                             </tbody>
                 
@@ -168,7 +163,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         crossorigin="anonymous"></script>
 
-        <script src="./restapi/FacultyListAnswer.js"></script>
+        <script src="./restapi/StudentListMarks.js"></script>
 
     </body>
 </html>

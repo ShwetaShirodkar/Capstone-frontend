@@ -31,10 +31,10 @@ function setupTable() {
         row.insertCell(0).innerHTML = userName
         row.insertCell(1).innerHTML = courseName
         row.insertCell(2).innerHTML = facultyName  
-        row.insertCell(3).innerHTML = `
+    //     row.insertCell(3).innerHTML = `
       
         
-    `       
+    // `       
     }
 
     
