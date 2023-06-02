@@ -36,11 +36,25 @@ function populateActualData(table, courses) {
     recordingButton.classList.add('watch-now-button');
     recordingButton.innerHTML = 'View Recordings';
     recordingButton.addEventListener('click', () => window.open(recording, '_blank'));
+
+    // const blankLine2 = document.createElement('br')
+    // const blankLine3 = document.createElement('br')
+    // const blankLine4 = document.createElement('br')
+      const updateButton = document.createElement('button')
+      updateButton.innerHTML = 'Live Class'
+    updateButton.classList.add('button', 'browse-button')
+    // updateButton.setAttribute('data-id', courseId)
+    updateButton.addEventListener('click', (event) => {
+    //   const courseId = event.target.getAttribute('data-id')
+      window.location.href = `https://meet.google.com/htc-qaiz-wqe`
+    })
+
     card.appendChild(header)
     card.appendChild(faculty)
     card.appendChild(dates)
     card.appendChild(materialButton)
     card.appendChild(recordingButton)
+    card.appendChild(updateButton)
     grid.appendChild(card)
   }
   table.appendChild(grid)

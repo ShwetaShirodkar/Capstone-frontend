@@ -1,13 +1,15 @@
 function setupTable() {
     const table = document.getElementById('tableEnrolledStudents')
 
-    // const btnSearch = document.getElementById('btnSearch')
+    const courseSearch = document.getElementById('courseSearch')
     
     // btnSearch.onclick = () =>   {
 
     //     const api=apiFetchBooking(table, document.getElementById('txtUsername').value )
     //     console.log(api)
     // }
+
+    
     
     apiFetchAllEnrollments(table)
 }
@@ -29,10 +31,10 @@ function setupTable() {
         row.insertCell(0).innerHTML = userName
         row.insertCell(1).innerHTML = courseName
         row.insertCell(2).innerHTML = facultyName  
-        row.insertCell(3).innerHTML = `
+    //     row.insertCell(3).innerHTML = `
       
         
-    `       
+    // `       
     }
 
     
